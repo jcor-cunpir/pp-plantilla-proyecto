@@ -1,0 +1,6 @@
+# Generado por CMake: NUNCA va a Git
+build/
+# Configuración local de editores
+.vscode/
+.idea/
+.DS_Store
