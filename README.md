@@ -20,10 +20,11 @@ Punto de partida para el proyecto de la asignatura: estructura `include/` + `src
 | | Windows (PowerShell) | Mac (Terminal) |
 | --- | --- | --- |
 | Descargar | `git clone https://github.com/vuestro-usuario/vuestro-repo.git` | igual |
+| Entrar en la carpeta | `cd vuestro-repo` | igual |
 | Configurar (1.ª vez; descarga GoogleTest) | `cmake -S . -B build -G Ninja` | `cmake -S . -B build` |
 | Compilar | `cmake --build build` | `cmake --build build` |
 | Ejecutar el programa | `.\build\gestor.exe` | `./build/gestor` |
-| Pasar los tests | `cd build` y `ctest --output-on-failure` | igual |
+| Pasar los tests | `cd build`, `ctest --output-on-failure` y `cd ..` para volver | igual |
 | Ver el detalle de los tests | `.\build\tests_gestor.exe` | `./build/tests_gestor` |
 
 ## 3. Dónde va cada cosa
@@ -37,8 +38,11 @@ tests/test_*.cpp       <- tests con GoogleTest (la Entrega 2 pide al menos 5 que
 .github/workflows/     <- el pipeline de CI: compila y pasa los tests en cada push
 ```
 
-La clase `Habitacion` (con sus tests) es **solo un ejemplo**: cuando tengáis vuestras clases,
-borrad `include/habitacion.hpp`, `src/habitacion.cpp`, `tests/test_habitacion.cpp` y sus líneas en el `CMakeLists.txt`.
+La clase `Habitacion` (con sus tests) es **solo un ejemplo**. Cuando tengáis vuestras clases:
+
+1. Cambiad `src/main.cpp` para que use vuestras clases en lugar de `Habitacion` (quitad también su `#include`).
+2. Borrad `include/habitacion.hpp`, `src/habitacion.cpp` y `tests/test_habitacion.cpp`.
+3. Quitad sus líneas del `CMakeLists.txt` (en `FUENTES` y en `tests_gestor`).
 
 ## 4. El pipeline (CI)
 
