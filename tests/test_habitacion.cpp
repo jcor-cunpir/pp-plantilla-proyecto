@@ -27,3 +27,10 @@ TEST(HabitacionTest, ReservarDobleVezDevuelveFalse) {
 TEST(HabitacionTest, PrecioNegativoLanzaExcepcion) {
     EXPECT_THROW(Habitacion(101, -50.0), std::invalid_argument);
 }
+
+TEST(HabitacionTest, LiberarDejaLaHabitacionLibre) {
+    Habitacion h(101, 80.0);
+    h.reservar();
+    h.liberar();
+    EXPECT_FALSE(h.estaOcupada());
+}
