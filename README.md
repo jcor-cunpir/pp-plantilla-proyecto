@@ -38,8 +38,11 @@ tests/test_*.cpp       <- tests con GoogleTest (la Entrega 2 pide al menos 5 que
 .github/workflows/     <- el pipeline de CI: compila y pasa los tests en cada push
 ```
 
-La clase `Habitacion` (con sus tests) es **solo un ejemplo**: cuando tengáis vuestras clases,
-borrad `include/habitacion.hpp`, `src/habitacion.cpp`, `tests/test_habitacion.cpp` y sus líneas en el `CMakeLists.txt`.
+La clase `Habitacion` (con sus tests) es **solo un ejemplo**. Cuando tengáis vuestras clases:
+
+1. Cambiad `src/main.cpp` para que use vuestras clases en lugar de `Habitacion` (quitad también su `#include`).
+2. Borrad `include/habitacion.hpp`, `src/habitacion.cpp` y `tests/test_habitacion.cpp`.
+3. Quitad sus líneas del `CMakeLists.txt` (en `FUENTES` y en `tests_gestor`).
 
 ## 4. El pipeline (CI)
 
