@@ -20,10 +20,11 @@ Punto de partida para el proyecto de la asignatura: estructura `include/` + `src
 | | Windows (PowerShell) | Mac (Terminal) |
 | --- | --- | --- |
 | Descargar | `git clone https://github.com/vuestro-usuario/vuestro-repo.git` | igual |
+| Entrar en la carpeta | `cd vuestro-repo` | igual |
 | Configurar (1.ª vez; descarga GoogleTest) | `cmake -S . -B build -G Ninja` | `cmake -S . -B build` |
 | Compilar | `cmake --build build` | `cmake --build build` |
 | Ejecutar el programa | `.\build\gestor.exe` | `./build/gestor` |
-| Pasar los tests | `cd build` y `ctest --output-on-failure` | igual |
+| Pasar los tests | `cd build`, `ctest --output-on-failure` y `cd ..` para volver | igual |
 | Ver el detalle de los tests | `.\build\tests_gestor.exe` | `./build/tests_gestor` |
 
 ## 3. Dónde va cada cosa
